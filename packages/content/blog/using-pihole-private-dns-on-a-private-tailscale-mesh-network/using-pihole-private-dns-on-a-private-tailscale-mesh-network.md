@@ -3,11 +3,11 @@ title: "Using PiHole private DNS on a private Tailscale mesh network"
 image: images/intro.jpg
 +++
 
-I've been using Tailscale for a while to connect all my devices together in a mesh network. I use it to access access web applications running on either of my servers (home or remote), from any of my devices (phone, laptop, tablet), from anywhere. Tailscale makes this real easy. Install it on your devices and it will automatically connect your devices together and assign them unique ip addresses. To see how it works, check out [their blog post ](https://tailscale.com/blog/how-tailscale-works/) that goes in depth.
+I've been using Tailscale for a while to connect all my devices together in a mesh network. I use it to access access web applications running on either of my servers (home or remote), from any of my devices (phone, laptop, tablet). Tailscale makes this real easy. Install it on your devices and it will automatically connect your devices together and assign them unique ip addresses. To see how it works, check out [their blog post ](https://tailscale.com/blog/how-tailscale-works/) that goes in depth.
 
 Recently I wanted to add a [PiHole](https://pi-hole.net/) private DNS server to my setup in order to increase security and privacy while browsing. As well as to use readable hostnames instead of remembering ip addresses or messing with local host file entires.
 
-A simplified view of the final setup looks like this.
+A simplified view of the setup looks like this:
 
 > TODO: ACTUAL NETWORK DIAGRAM
 
@@ -21,7 +21,7 @@ In this blog post we're going to run PiHole in a docker container on it's own su
 
 ## Setting up PiHole
 
-There are a few ways to setup PiHole. In this case I'm running it with Docker on a remote server. But this guide also works if you're hosting PiHole differently. The important part is to have PiHole accessible on the Tailscale mesh network. To do this you can install Tailscale on the server running PiHole, or setup a subnet relay node (see next section).
+There are a few ways to setup PiHole. In this case I'm running it with Docker on a remote server. But this guide also works if you're hosting PiHole directly. The important part is to have PiHole accessible on the Tailscale mesh network. To do this you can install Tailscale on the server running PiHole, or setup a subnet relay node (see next section).
 
 First I'm going to create a new Docker bridge network, because I don't want to use port bindings to my host machine. This way I can host PiHole on a separate internal IP and use the default port for DNS (53). This keeps the application isolated from the host machine.
 
