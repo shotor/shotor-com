@@ -5,7 +5,7 @@ image: images/intro.jpg
 
 I've been using Tailscale for a while to connect all my devices together in a mesh network. I use it to access access web applications running on either of my servers (home or remote), from any of my devices (phone, laptop, tablet). Tailscale makes this real easy. Install it on your devices and it will automatically connect your devices together and assign them unique ip addresses. To see how it works, check out [their blog post ](https://tailscale.com/blog/how-tailscale-works/) that goes in depth.
 
-Recently I wanted to add a [PiHole](https://pi-hole.net/) private DNS server to my setup in order to increase security and privacy while browsing. As well as to use readable hostnames instead of remembering ip addresses or messing with local host file entires.
+Recently I wanted to add a [PiHole](https://pi-hole.net/) private DNS server to my setup in order to increase security and privacy while browsing. As well as to assign readable hostnames so I don't have to memorize ip addresses or mess with local host files anymore.
 
 A simplified view of the setup looks like this:
 
