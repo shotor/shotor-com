@@ -4,27 +4,13 @@ html {
 
 body {
   height: 100%;
-  font-family: "Work Sans", sans-serif;
-  line-height: 6px;
-  color: #111;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-a {
-  color: #111;
-}
-
-a:hover {
-  color: #666;
-}
-
-main {
-  margin: 0 auto;
-  max-width: 1200px;
+#home {
+  line-height: 6px;
 }
 
 #blog {
