@@ -37,13 +37,14 @@
         devices and it will connect your devices together and
         assign them unique ip addresses. To see how it works, check out
         <a href="https://tailscale.com/blog/how-tailscale-works/"
+          target="_blank"
           >their blog post
         </a>
         that goes in depth.
       </p>
       <p>
         Recently I wanted to add
-        <a href="https://pi-hole.net/">PiHole</a> private DNS to my setup in
+        <a href="https://pi-hole.net/" target="_blank">PiHole</a> private DNS to my setup in
         order to increase security and privacy while browsing. And also to
         assign readable hostnames to each device. This way I don&#39;t have to
         memorize ip addresses or mess with local host files anymore.
@@ -61,6 +62,7 @@
         If you don&#39;t want to run your own DNS, but just want readable names
         for your devices. You can skip this guide and use
         <a href="https://tailscale.com/kb/1081/magic-dns"
+          target="_blank"
           >Tailscale Magic DNS</a
         >
         instead. It automatically assigns fixed hostnames to all your devices.
@@ -127,7 +129,7 @@
       <p>
         With Tailscale we can expose internal ip addresses of a machine by
         turning the device into a
-        <a href="https://tailscale.com/kb/1019/subnets">relay node</a>.
+        <a href="https://tailscale.com/kb/1019/subnets" target="_blank">relay node</a>.
       </p>
       <p>
         We restart Tailscale and instruct it to advertise the subnet we want to
@@ -159,7 +161,7 @@ sudo sysctl -p /etc/sysctl.conf</code></pre>
       </p>
       <pre><code>sudo tailscale up --accept-routes</code></pre>
       <p>
-        Now go to <a href="http://172.21.0.2">http://172.21.0.2</a> on any of
+        Now go to <a href="http://172.21.0.2" target="_blank">http://172.21.0.2</a> on any of
         your devices to see PiHole running. Pretty cool, right?
       </p>
       <h2 id="setting-the-dns-server-for-all-our-devices">
@@ -213,12 +215,12 @@ nameserver 172.21.0.2</code></pre>
         </li>
         <li>
           Add new block lists to block more ads, trackers and malware,
-          <a href="https://hosts.oisd.nl/">this one</a> is quite popular.
+          <a href="https://hosts.oisd.nl/" target="_blank">this one</a> is quite popular.
         </li>
         <li>
           Run a second instance of PiHole, in case one malfunctions, and add it
           as the secondary DNS.
-          <a href="https://github.com/vmstan/gravity-sync">Gravity-sync</a> can
+          <a href="https://github.com/vmstan/gravity-sync" target="_blank">Gravity-sync</a> can
           help with synchronization of the PiHole instances.
         </li>
         <li>
@@ -228,11 +230,11 @@ nameserver 172.21.0.2</code></pre>
         </li>
         <li>
           Run some more apps.
-          <a href="https://hub.docker.com/r/linuxserver/calibre">Here</a>
-          <a href="https://hub.docker.com/r/gitea/gitea">are</a>
-          <a href="https://hub.docker.com/r/linuxserver/syncthing">some</a>
-          <a href="https://hub.docker.com/r/linuxserver/code-server">cool</a>
-          <a href="https://github.com/awesome-selfhosted/awesome-selfhosted"
+          <a target="_blank" href="https://hub.docker.com/r/linuxserver/calibre">Here</a>
+          <a target="_blank" href="https://hub.docker.com/r/gitea/gitea">are</a>
+          <a target="_blank" href="https://hub.docker.com/r/linuxserver/syncthing">some</a>
+          <a target="_blank" href="https://hub.docker.com/r/linuxserver/code-server">cool</a>
+          <a target="_blank" href="https://github.com/awesome-selfhosted/awesome-selfhosted"
             >ones</a
           >.
         </li>
