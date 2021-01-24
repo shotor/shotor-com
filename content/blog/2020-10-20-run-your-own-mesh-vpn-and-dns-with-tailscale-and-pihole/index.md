@@ -2,6 +2,7 @@
 title = "Run your own mesh VPN and DNS with Tailscale and PiHole"
 description = "A guide on how to configure Tailscale and PiHole together"
 date = 2020-10-20
+updated = 2021-01-23
 +++
 
 I've been using Tailscale for a while to connect all my devices together in a mesh network. I use it to access web applications running on one of my servers (home or remote), from any of my devices (phone, laptop, tablet). Tailscale makes this really easy. Install it on your devices and it will automatically connect your devices together and assign them unique ip addresses. To see how it works, check out [their blog post ](https://tailscale.com/blog/how-tailscale-works/) that goes in depth.

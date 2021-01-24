@@ -6,6 +6,6 @@
     </url>{% for page in blog.pages %}
     <url>
         <loc>{{ page.permalink | safe }}</loc>
-        <lastmod>{{page.date}}</lastmod>
+        <lastmod>{{page.updated | default(value = page.date)}}</lastmod>
     </url>{% endfor %}
 </urlset>
