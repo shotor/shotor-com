@@ -4,6 +4,10 @@ Repository for the <https://shotor.com> website
 
 ## Usage
 
+### Dependencies
+
+- [Zola](https://www.getzola.org/)
+
 ### Development
 
 ```sh
