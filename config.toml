@@ -3,12 +3,10 @@ title = "shotor.com"
 description = "shotor software development services"
 default_language = "en"
 compile_sass = true
-# build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 [markdown]
-# syntax highlighting
 highlight_code = true
+highlight_theme = "ayu-mirage"
 
 [extra]
-# custom variables
