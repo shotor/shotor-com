@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block head %}
+<link href="/static/css/home.css" rel="stylesheet" />
+{% endblock head %} {% block content %}
+<main id="home">
+  <article id="company">
+    <h1>shotor</h1>
+    <p>software development</p>
+    <p>
+      <a href="mailto:web@shotor.com">mail</a> |
+      <a href="https://www.linkedin.com/in/kian-khosh-95087b10b/">linkedin</a>
+    </p>
+  </article>
+  <section id="blog">
+    <h1>Blog posts</h1>
+    {% set section = get_section(path="blog/_index.md") %} {% for page in
+    section.pages %}
+    <article class="blog-post">
+      <h1>
+        <a href="{{ page.permalink | safe }}"> {{ page.title }} </a>
+      </h1>
+    </article>
+    {% endfor %}
+  </section>
+</main>
+{% endblock content %}
