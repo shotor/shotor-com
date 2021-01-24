@@ -1,4 +1,8 @@
-![Run your own mesh VPN and DNS with Tailscale and PiHole](images/intro.png)
++++
+title = "Run your own mesh VPN and DNS with Tailscale and PiHole"
+description = "A guide on how to configure Tailscale and PiHole together"
+date = 2020-10-20
++++
 
 I've been using Tailscale for a while to connect all my devices together in a mesh network. I use it to access web applications running on one of my servers (home or remote), from any of my devices (phone, laptop, tablet). Tailscale makes this really easy. Install it on your devices and it will automatically connect your devices together and assign them unique ip addresses. To see how it works, check out [their blog post ](https://tailscale.com/blog/how-tailscale-works/) that goes in depth.
 
@@ -6,7 +10,7 @@ Recently I wanted to add [PiHole](https://pi-hole.net/) private DNS to my setup 
 
 A simplified view of my setup:
 
-![Network Diagram](images/network.png)
+![Network Diagram](./network.png)
 
 We're going to run PiHole in a Docker container on it's own subnet. We'll expose this subnet on our network by turning one of our servers into a Tailscale subnet relay node. Finally, we'll set the DNS server to be used by all our Tailscale devices through the Tailscale admin console.
 
@@ -77,11 +81,11 @@ sudo sysctl -p /etc/sysctl.conf
 
 Then for our host machine we disable key expiry and enable subnet routes.
 
-![Disable key expiry and enable subnet routes](images/key-expiry-subnet-routes.png)
+![Disable key expiry and enable subnet routes](./key-expiry-subnet-routes.png)
 
 If everything went well you should see the subnet in the admin panel.
 
-![Subnet routes enabled](images/subnets-enabled.png)
+![Subnet routes enabled](./subnets-enabled.png)
 
 We can now access the subnet on any connected device. On Linux devices you'll have to enable this feature first:
 
@@ -100,7 +104,7 @@ But we can take it a step further by using PiHole as the default DNS for all con
 This part is very easy.
 
 In the Tailscale admin console, we're going to click on the DNS tab. And add our PiHole IP address as the DNS.
-![PiHole DNS](images/pihole-dns.png)
+![PiHole DNS](./pihole-dns.png)
 
 That's it. All our devices are now configured to use PiHole as the primary DNS. You can see this by opening a website on a device and checking the logs in the PiHole UI. Or by checking the contents of the `/etc/resolv.conf` file.
 

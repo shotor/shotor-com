@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    {% set resource = section | default(value = page) -%}
+    <meta name="og:title" content="{{ resource.title }}" />
+    <meta name="description" content="{{ resource.description }}" />
+    <meta name="og:description" content="{{ resource.description }}" />
+    <link rel="canonical" href="{{ current_url | safe }}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans"
+      rel="stylesheet"
+    />
+    <link href="/static/css/style.css" rel="stylesheet" />
+    {% block head %} {% endblock %}
+  </head>
+
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+
+  <noscript
+    ><img
+      src="https://shynet.shotor.io/ingress/7154a27a-dd5d-4bfb-8c1a-d440abb2e6f3/pixel.gif"
+  /></noscript>
+  <script src="https://shynet.shotor.io/ingress/7154a27a-dd5d-4bfb-8c1a-d440abb2e6f3/script.js"></script>
+</html>
