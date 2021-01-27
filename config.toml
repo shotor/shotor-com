@@ -4,6 +4,8 @@ description = "shotor software development services"
 default_language = "en"
 compile_sass = true
 build_search_index = false
+generate_feed = true
+feed_filename = "atom.xml"
 
 [markdown]
 highlight_code = true
